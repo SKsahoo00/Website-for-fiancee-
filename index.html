@@ -1,0 +1,1698 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SKS Fiancee – make your money move</title>
+<meta name="description" content="SKS Fiancee: savings, SIP, FD and loans in one account, with every rupee shown in 3D. A concept brand.">
+<meta property="og:title" content="SKS Fiancee – make your money move">
+<meta property="og:description" content="Savings, investing and loans in one account. See every rupee move.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#141bff">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none'%3E%3Crect width='64' height='64' rx='14' fill='%23141bff'/%3E%3Ccircle cx='32' cy='32' r='16' fill='%23ffd24a'/%3E%3Ccircle cx='32' cy='32' r='11' fill='none' stroke='%230a0c3a' stroke-width='1.5'/%3E%3Ctext x='32' y='37' text-anchor='middle' font-family='system-ui,sans-serif' font-weight='800' font-size='14' fill='%230a0c3a'%3E%E2%82%B9%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+<meta name="application-name" content="SKS Fiancee">
+<meta name="apple-mobile-web-app-title" content="SKS Fiancee">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=DM+Sans:wght@400;500;700&family=Noto+Sans+Devanagari:wght@400;700&family=Noto+Sans+Oriya:wght@400;700&family=Noto+Sans+Tamil:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#141bff;
+  --bg2:#0b0f5c;
+  --paper:#f7f4ff;
+  --gold:#ffd24a;
+  --pink:#ff6fb5;
+  --ink:#070a2e;
+  --display:'Unbounded','Arial Black',Impact,sans-serif;
+  --body:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --card:rgba(12,14,60,.55);
+  --border:rgba(255,255,255,.18);
+  --glow:0 0 40px rgba(255,210,74,.25);
+  color-scheme:dark;
+  box-sizing:border-box;
+}
+:root[data-theme="light"]{
+  --bg:#eef0ff; --bg2:#e0e4ff; --paper:#0a0c3a; --gold:#b8860b; --pink:#d63384; --ink:#f8f6ff;
+  --card:rgba(255,255,255,.88); --border:rgba(10,12,58,.1); --glow:0 8px 32px rgba(20,27,255,.1);
+}
+:root[data-theme="light"] body{
+  background:radial-gradient(ellipse 120% 80% at 50% -20%, #c8ceff 0%, var(--bg) 50%, #dce0ff 100%);
+}
+:root[data-theme="light"] .panel,
+:root[data-theme="light"] .port-card,
+:root[data-theme="light"] .goal-box,
+:root[data-theme="light"] .proof,
+:root[data-theme="light"] .bank,
+:root[data-theme="light"] .lang,
+:root[data-theme="light"] .tabs{
+  box-shadow:0 4px 24px rgba(20,27,255,.08);
+}
+:root[data-theme="light"] .btn.solid{box-shadow:0 4px 16px rgba(10,12,58,.12)}
+:root[data-theme="light"] header{background:linear-gradient(to bottom,rgba(238,240,255,.9),transparent)}
+:root[data-theme="light"] .logo{
+  background:linear-gradient(135deg,#0a0c3a,#b8860b);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px)}
+body{
+  margin:0;
+  background:radial-gradient(ellipse 120% 80% at 50% -20%, #2a35ff 0%, var(--bg) 45%, var(--bg2) 100%);
+  color:var(--paper);
+  font-family:var(--body);
+  font-size:1.0625rem;
+  line-height:1.55;
+  overflow-x:hidden;
+  transition:background .35s,color .25s;
+  min-height:100vh;
+}
+#gl{position:fixed;inset:0;width:100%;height:100%;display:block;z-index:0;pointer-events:none}
+main,header{position:relative;z-index:1}
+header{
+  position:fixed;top:0;left:0;right:0;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:calc(env(safe-area-inset-top,0px) + 12px) clamp(14px,4vw,48px) 12px;
+  background:linear-gradient(to bottom,rgba(0,0,0,.35),transparent);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  z-index:50;
+}
+.logo{
+  font-family:var(--display);font-weight:900;font-size:1.25rem;letter-spacing:-.02em;
+  color:var(--paper);text-decoration:none;
+  background:linear-gradient(135deg,var(--paper),var(--gold));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+button,.btn{font:inherit;cursor:pointer}
+.wild{
+  background:var(--gold);
+  color:var(--ink);border:1px solid transparent;border-radius:10px;padding:.5rem 1rem;
+  font-weight:600;font-size:.85rem;letter-spacing:.01em;
+  transition:background .2s,box-shadow .2s,transform .2s,filter .2s;
+  box-shadow:0 1px 2px rgba(0,0,0,.12);
+}
+.wild:hover{background:#ffda6a;transform:translateY(-2px);box-shadow:0 6px 18px rgba(255,210,74,.4);filter:brightness(1.06)}
+.wild:active{transform:translateY(0);box-shadow:0 1px 2px rgba(0,0,0,.12)}
+.wild[aria-pressed="true"]{background:var(--pink);color:#fff}
+.wild[aria-pressed="true"]:hover{background:#ff85c0;box-shadow:0 6px 18px rgba(255,111,181,.4)}
+.theme-btn{
+  background:transparent;border:1px solid var(--border);
+  color:var(--paper);border-radius:10px;padding:.45rem .85rem;
+  font-weight:600;font-size:.85rem;
+  transition:background .2s,border-color .2s,transform .2s,box-shadow .2s;
+}
+.theme-btn:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.45);transform:translateY(-2px);box-shadow:0 4px 14px rgba(0,0,0,.18)}
+.theme-btn:active{transform:translateY(0)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+section{min-height:100vh;min-height:100svh;padding:clamp(90px,12vh,130px) clamp(14px,4vw,48px) 56px;display:flex;flex-direction:column;justify-content:center}
+.wrap{max-width:1100px;width:100%;margin:0 auto}
+h1,h2{font-family:var(--display);font-weight:900;letter-spacing:-.04em;line-height:.95;margin:0}
+h1{font-size:clamp(2.5rem,8.5vw,7rem);max-width:10ch;text-shadow:0 4px 40px rgba(0,0,0,.25)}
+h2{font-size:clamp(1.9rem,5.2vw,3.7rem);max-width:14ch}
+.hero-line{display:block;opacity:0;transform:translateY(40px) rotate(1.5deg);animation:up .9s cubic-bezier(.16,1,.3,1) forwards}
+.hero-line:nth-child(2){animation-delay:.12s}.hero-line:nth-child(3){animation-delay:.24s}
+@keyframes up{to{opacity:1;transform:none}}
+.sub{max-width:34rem;margin:1.5rem 0 1.9rem;font-size:clamp(1.08rem,2.5vw,1.22rem);opacity:.9;line-height:1.6}
+.row{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:.75rem 1.4rem;border-radius:10px;font-weight:600;
+  text-decoration:none;border:1px solid rgba(255,255,255,.35);color:var(--paper);
+  background:transparent;
+  transition:background .2s,border-color .2s,box-shadow .2s,transform .2s,filter .2s;
+  font-size:.9rem;letter-spacing:.01em;line-height:1.2;
+}
+.btn.solid{
+  background:var(--paper);color:var(--ink);border-color:var(--paper);
+  box-shadow:0 1px 3px rgba(0,0,0,.15);
+}
+.btn:hover{
+  background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.65);
+  transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.2);
+}
+.btn.solid:hover{
+  background:#fff;transform:translateY(-2px);
+  box-shadow:0 8px 22px rgba(0,0,0,.22);filter:brightness(1.03);
+}
+.btn:active{transform:translateY(0);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none;filter:none}
+.btn:disabled:hover{transform:none;box-shadow:none}
+
+/* Click ripple */
+.ripple-host{position:relative;overflow:hidden}
+.ripple-ink{
+  position:absolute;border-radius:50%;pointer-events:none;
+  transform:scale(0);opacity:.5;
+  background:rgba(255,255,255,.5);
+  animation:ripple-anim .55s ease-out forwards;
+}
+.btn.solid .ripple-ink,
+.wild .ripple-ink,
+.bank[aria-pressed="true"] .ripple-ink,
+.goal-chip[aria-pressed="true"] .ripple-ink,
+.lang button[aria-pressed="true"] .ripple-ink,
+.tab[aria-pressed="true"] .ripple-ink{
+  background:rgba(10,12,58,.28);
+}
+@keyframes ripple-anim{
+  to{transform:scale(2.6);opacity:0}
+}
+
+.svc{
+  border-top:1.5px solid var(--border);border-left:0;border-right:0;border-bottom:0;
+  display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);
+  gap:1rem 2.5rem;padding:1.5rem 0;
+  transition:transform .3s cubic-bezier(.16,1,.3,1),color .25s;
+  width:100%;background:transparent;color:inherit;font:inherit;text-align:left;cursor:pointer;
+}
+.svc:last-child{border-bottom:1.5px solid var(--border)}
+.svc:hover{transform:translateX(12px);color:var(--gold);background:rgba(255,255,255,.03)}
+.svc:active{transform:translateX(8px)}
+.svc:focus-visible{outline:3px solid var(--gold);outline-offset:4px;border-radius:8px}
+.svc h3{font-family:var(--display);font-weight:900;font-size:clamp(1.85rem,5.5vw,4.1rem);letter-spacing:-.04em;line-height:1;margin:0}
+.svc p{margin:0;align-self:center;max-width:24rem}
+.svc b{display:block;font-family:var(--display);font-size:1.25rem;margin-bottom:.3rem;color:var(--gold)}
+.services{margin-top:2.2rem;max-width:740px}
+.bank-modal-grid{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0 1.25rem}
+.bank-modal-grid .bank{font-size:.85rem;padding:.55rem .9rem}
+.panel{
+  background:var(--card);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-radius:28px;padding:clamp(20px,3vw,36px);max-width:500px;margin-top:2rem;
+  border:1px solid var(--border);
+  box-shadow:0 20px 60px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.06);
+}
+.panel label{display:flex;justify-content:space-between;font-weight:700;margin-top:1.15rem;font-size:.95rem}
+.panel output{font-family:var(--display);color:var(--gold);font-weight:700}
+input[type=range]{width:100%;accent-color:var(--pink);height:30px;margin:.2rem 0 0}
+.total{font-family:var(--display);font-weight:900;font-size:clamp(2.1rem,5.5vw,3.4rem);letter-spacing:-.04em;margin:1.3rem 0 .2rem;background:linear-gradient(135deg,var(--paper),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.fine{font-size:.82rem;opacity:.78;margin:0}
+.cta form{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.9rem}
+.cta input[type=email]{flex:1 1 220px;min-width:0;padding:.8rem 1.15rem;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--paper);font:inherit;transition:border-color .2s}
+.cta input:focus{border-color:var(--gold);outline:none}
+.cta input::placeholder{color:rgba(244,240,255,.5)}
+#ok{min-height:1.5em;margin-top:.9rem;font-weight:700;color:var(--gold)}
+footer{position:relative;z-index:1;padding:22px clamp(14px,4vw,48px) calc(env(safe-area-inset-bottom,0px) + 30px);font-size:.82rem;opacity:.7;max-width:1100px;margin:0 auto}
+.bgroup{margin:1.6rem 0 .65rem;font-weight:700;font-size:.95rem}
+.chips{display:flex;flex-wrap:wrap;gap:.55rem}
+.bank{
+  font-family:var(--body);font-weight:600;font-size:.88rem;letter-spacing:0;
+  color:var(--paper);background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:10px;
+  padding:.55rem 1rem;
+  transition:background .2s,border-color .2s,box-shadow .2s,transform .2s;
+}
+.bank:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.4);transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.18)}
+.bank[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:var(--ink);box-shadow:0 2px 8px rgba(255,210,74,.3)}
+.bank[aria-pressed="true"]:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(255,210,74,.4);filter:brightness(1.05)}
+#bankout{min-height:3em;margin:1.5rem 0 0;font-size:1.05rem;max-width:34rem}
+.banks .wrap{max-width:860px;margin-left:0}
+.hd{display:flex;gap:.45rem;align-items:center;flex-wrap:wrap}
+.lang,.tabs{display:flex;gap:2px;background:rgba(0,0,0,.2);border-radius:10px;padding:3px;width:max-content;border:1px solid var(--border)}
+.lang button,.tab{border:0;background:transparent;color:var(--paper);font-weight:600;border-radius:8px;padding:.4rem .7rem;font-size:.82rem;transition:background .18s,color .18s,transform .18s}
+.lang button[aria-pressed="true"],.tab[aria-pressed="true"]{background:var(--paper);color:var(--ink)}
+.lang button:hover,.tab:hover{background:rgba(255,255,255,.12);transform:translateY(-1px)}
+.lang button[aria-pressed="true"]:hover,.tab[aria-pressed="true"]:hover{background:#fff;color:var(--ink)}
+.steps{list-style:none;margin:2.1rem 0 0;padding:0;max-width:600px;border-left:3px solid var(--gold)}
+.steps li{display:grid;grid-template-columns:2.8rem 1fr;padding:0 0 1.7rem 1.25rem}
+.steps li:last-child{padding-bottom:0}
+.steps i{font-style:normal;font-family:var(--display);font-weight:900;font-size:2.15rem;color:var(--gold);line-height:1;grid-row:span 2}
+.steps h3{font-family:var(--display);font-weight:900;font-size:clamp(1.2rem,2.8vw,1.75rem);letter-spacing:-.03em;margin:0}
+.steps p{margin:.15rem 0 0;max-width:28rem;font-size:.95rem;opacity:.9}
+/* Portfolio cards */
+.port-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.1rem;margin-top:2.2rem;max-width:820px}
+.port-card{
+  background:var(--card);border:1px solid var(--border);border-radius:20px;
+  padding:1.4rem 1.5rem;backdrop-filter:blur(16px);
+  transition:transform .25s,box-shadow .25s,border-color .25s;
+  box-shadow:0 8px 32px rgba(0,0,0,.15);
+}
+.port-card:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.28);box-shadow:0 16px 40px rgba(0,0,0,.25)}
+.port-card h3{font-family:var(--display);font-size:.95rem;margin:0 0 .45rem;opacity:.8;font-weight:700}
+.port-card .val{font-family:var(--display);font-weight:900;font-size:1.8rem;color:var(--gold);letter-spacing:-.03em}
+.port-card .chg{font-size:.85rem;margin-top:.3rem;opacity:.8}
+.port-card .chg.up{color:#4ade80}
+/* Goal */
+.goal-box{
+  background:var(--card);border:1px solid var(--border);border-radius:24px;
+  padding:1.75rem;max-width:440px;margin-top:2rem;
+  box-shadow:0 16px 48px rgba(0,0,0,.2);
+}
+.goal-bar{height:12px;background:rgba(255,255,255,.1);border-radius:999px;overflow:hidden;margin:1.1rem 0 .65rem}
+.goal-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--pink));border-radius:999px;width:42%;transition:width .5s cubic-bezier(.16,1,.3,1);box-shadow:0 0 16px rgba(255,210,74,.4)}
+.goal-meta{display:flex;justify-content:space-between;font-size:.9rem;font-weight:600}
+/* Social proof */
+.proof{
+  display:inline-flex;align-items:center;gap:.55rem;
+  background:rgba(0,0,0,.3);border:1px solid var(--border);border-radius:999px;
+  padding:.5rem 1.15rem;font-size:.9rem;font-weight:600;margin-top:1.5rem;
+  backdrop-filter:blur(8px);
+}
+.proof span{color:var(--gold);font-family:var(--display);font-weight:700}
+html[lang="hi"]{--display:'Noto Sans Devanagari','Nirmala UI',sans-serif;--body:'Noto Sans Devanagari','Nirmala UI',sans-serif}
+html[lang="or"]{--display:'Noto Sans Oriya','Nirmala UI',sans-serif;--body:'Noto Sans Oriya','Nirmala UI',sans-serif}
+html[lang="ta"]{--display:'Noto Sans Tamil','Nirmala UI',sans-serif;--body:'Noto Sans Tamil','Nirmala UI',sans-serif}
+html:not([lang="en"]) h1,html:not([lang="en"]) h2,html:not([lang="en"]) h3,html:not([lang="en"]) .total{letter-spacing:0;line-height:1.2;max-width:none}
+.nogl #gl{display:none}
+
+/* ===== Animations & Transitions ===== */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .75s cubic-bezier(.16,1,.3,1),transform .75s cubic-bezier(.16,1,.3,1)}
+.reveal.visible{opacity:1;transform:none}
+.reveal-left{opacity:0;transform:translateX(-50px);transition:opacity .75s cubic-bezier(.16,1,.3,1),transform .75s cubic-bezier(.16,1,.3,1)}
+.reveal-left.visible{opacity:1;transform:none}
+.reveal-right{opacity:0;transform:translateX(50px);transition:opacity .75s cubic-bezier(.16,1,.3,1),transform .75s cubic-bezier(.16,1,.3,1)}
+.reveal-right.visible{opacity:1;transform:none}
+.reveal-scale{opacity:0;transform:scale(.9);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.reveal-scale.visible{opacity:1;transform:none}
+.reveal-delay-1{transition-delay:.12s}
+.reveal-delay-2{transition-delay:.24s}
+.reveal-delay-3{transition-delay:.36s}
+.reveal-delay-4{transition-delay:.48s}
+
+/* Gold accent line under headings when revealed */
+h2.reveal{position:relative}
+h2.reveal.visible::after{
+  content:'';display:block;width:48px;height:4px;
+  background:linear-gradient(90deg,var(--gold),var(--pink));
+  border-radius:2px;margin-top:.55rem;
+  animation:lineIn .55s cubic-bezier(.16,1,.3,1) .15s both;
+}
+@keyframes lineIn{from{width:0;opacity:0}to{width:48px;opacity:1}}
+
+.port-card{transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s,border-color .3s}
+.port-card .val{transition:transform .35s cubic-bezier(.16,1,.3,1)}
+.port-card:hover .val{transform:scale(1.07)}
+.svc{transition:transform .4s cubic-bezier(.16,1,.3,1),color .25s}
+.btn,.wild,.theme-btn,.bank,.tab,.lang button{
+  transition:transform .22s cubic-bezier(.16,1,.3,1),background .22s,box-shadow .22s,border-color .22s,color .22s;
+  position:relative;overflow:hidden;
+}
+.btn:active,.wild:active,.bank:active{transform:translateY(1px)}
+
+.goal-fill{width:0;transition:width 1.4s cubic-bezier(.16,1,.3,1) .2s}
+.goal-box.visible .goal-fill{width:42%}
+.proof{transition:transform .3s,box-shadow .3s}
+.proof:hover{transform:scale(1.04)}
+.panel{transition:box-shadow .3s,border-color .3s,transform .7s,opacity .7s}
+.logo{transition:filter .3s,transform .3s}
+.logo:hover{filter:brightness(1.15);transform:scale(1.03)}
+
+/* professional: no pulse on primary controls */
+
+/* Steps cascade in */
+.steps li{opacity:0;transform:translateX(-24px);transition:opacity .5s cubic-bezier(.16,1,.3,1),transform .5s cubic-bezier(.16,1,.3,1)}
+.steps.visible li{opacity:1;transform:none}
+.steps.visible li:nth-child(1){transition-delay:.1s}
+.steps.visible li:nth-child(2){transition-delay:.28s}
+.steps.visible li:nth-child(3){transition-delay:.46s}
+
+/* Bank chips cascade */
+.chips .bank{opacity:0;transform:translateY(18px) scale(.94);transition:opacity .4s cubic-bezier(.16,1,.3,1),transform .4s cubic-bezier(.16,1,.3,1),background .22s,border-color .22s,box-shadow .22s,color .22s}
+.chips.visible .bank{opacity:1;transform:none}
+.chips.visible .bank:nth-child(1){transition-delay:.06s}
+.chips.visible .bank:nth-child(2){transition-delay:.12s}
+.chips.visible .bank:nth-child(3){transition-delay:.18s}
+.chips.visible .bank:nth-child(4){transition-delay:.24s}
+.chips.visible .bank:nth-child(5){transition-delay:.3s}
+
+@keyframes numPop{0%{transform:scale(1)}45%{transform:scale(1.14)}100%{transform:scale(1)}}
+.val.animating{animation:numPop .45s cubic-bezier(.16,1,.3,1)}
+
+/* Shimmer on big total number */
+.total{background-size:200% auto;animation:shimmer 3.5s linear infinite}
+@keyframes shimmer{to{background-position:200% center}}
+
+/* Bar legend under calculator */
+.bar-legend{margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--border)}
+.bar-labels{display:flex;justify-content:space-between;gap:.25rem;margin-bottom:.65rem}
+.bar-labels span{
+  flex:1;text-align:center;font-size:.72rem;font-weight:700;
+  opacity:.65;font-family:var(--display);letter-spacing:-.02em;
+}
+.bar-tip{
+  display:inline-block;padding:.35rem .85rem;border-radius:999px;
+  background:rgba(255,111,181,.15);border:1px solid rgba(255,111,181,.35);
+  font-size:.85rem;font-weight:700;color:var(--gold);
+  font-family:var(--display);transition:background .3s,border-color .3s;
+}
+.bar-tip.mode-fd{background:rgba(255,210,74,.15);border-color:rgba(255,210,74,.4)}
+.bar-tip.mode-loan{background:rgba(91,141,239,.15);border-color:rgba(91,141,239,.4)}
+.bar-tip.mode-sip{background:rgba(255,111,181,.15);border-color:rgba(255,111,181,.35)}
+
+/* ===== Mobile nav ===== */
+.nav-desktop{display:flex;gap:1.4rem;align-items:center}
+.nav-desktop a{
+  color:var(--paper);text-decoration:none;font-weight:600;font-size:.9rem;
+  opacity:.85;transition:opacity .2s,color .2s;
+}
+.nav-desktop a:hover{opacity:1;color:var(--gold)}
+.hamburger{
+  display:none;flex-direction:column;justify-content:center;gap:5px;
+  width:40px;height:40px;background:transparent;border:1px solid var(--border);
+  border-radius:10px;padding:8px;cursor:pointer;transition:background .2s,border-color .2s;
+}
+.hamburger:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.3)}
+.hamburger span{
+  display:block;height:2px;background:var(--paper);border-radius:1px;
+  transition:transform .3s,opacity .3s;
+}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{
+  display:none;position:fixed;top:0;left:0;right:0;bottom:0;
+  background:rgba(7,10,46,.94);backdrop-filter:blur(20px);
+  z-index:60;flex-direction:column;justify-content:center;align-items:center;gap:1.5rem;
+  opacity:0;pointer-events:none;transition:opacity .3s;
+}
+.mobile-menu.open{display:flex;opacity:1;pointer-events:auto}
+.mobile-menu a{
+  font-family:var(--display);font-weight:900;font-size:1.8rem;
+  color:var(--paper);text-decoration:none;letter-spacing:-.03em;
+  transition:color .2s,transform .2s;
+}
+.mobile-menu a:hover{color:var(--gold);transform:scale(1.05)}
+.mobile-menu .close-hint{font-size:.85rem;opacity:.5;margin-top:1rem}
+
+/* Floating home button */
+.home-fab{
+  position:fixed;bottom:calc(env(safe-area-inset-bottom,0px) + 20px);right:20px;z-index:40;
+  width:48px;height:48px;border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--paper);color:var(--ink);text-decoration:none;
+  font-size:1.25rem;font-weight:700;
+  box-shadow:0 4px 20px rgba(0,0,0,.25);
+  opacity:0;visibility:hidden;transform:translateY(12px);
+  transition:opacity .25s,visibility .25s,transform .25s,box-shadow .2s;
+}
+.home-fab.show{opacity:1;visibility:visible;transform:translateY(0)}
+.home-fab:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.3)}
+.home-fab:active{transform:translateY(0)}
+
+/* Trust strip */
+.trust-strip{
+  display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;justify-content:center;
+  padding:1rem clamp(14px,4vw,48px);margin:0 auto;max-width:1100px;
+  font-size:.85rem;font-weight:600;opacity:.85;
+}
+.trust-strip span{display:inline-flex;align-items:center;gap:.4rem}
+.trust-strip i{color:var(--gold);font-style:normal}
+
+/* Ticker */
+.ticker-wrap{overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:rgba(0,0,0,.2);margin:0}
+.ticker{display:flex;gap:2.5rem;padding:.65rem 0;animation:ticker 28s linear infinite;width:max-content}
+.ticker span{font-weight:700;font-size:.85rem;white-space:nowrap;opacity:.9}
+.ticker .up{color:#4ade80}.ticker .down{color:#f87171}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* FAQ */
+.faq-list{max-width:640px;margin-top:1.8rem}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-item button{
+  width:100%;text-align:left;background:none;border:0;color:var(--paper);
+  font-family:var(--display);font-weight:700;font-size:1.05rem;
+  padding:1.1rem 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;
+}
+.faq-item button span{opacity:.5;font-size:1.2rem;transition:transform .25s}
+.faq-item.open button span{transform:rotate(45deg)}
+.faq-item .faq-body{max-height:0;overflow:hidden;transition:max-height .35s ease;opacity:.9;font-size:.95rem}
+.faq-item.open .faq-body{max-height:200px;padding-bottom:1rem}
+
+/* Testimonials */
+.t-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:2rem;max-width:900px}
+.t-card{
+  background:var(--card);border:1px solid var(--border);border-radius:18px;
+  padding:1.4rem;backdrop-filter:blur(12px);
+}
+.t-card p{margin:0 0 .9rem;font-size:.95rem;line-height:1.5;opacity:.9}
+.t-card .who{font-weight:700;font-size:.85rem;color:var(--gold)}
+
+/* Goal chips */
+.goal-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
+.goal-chip{
+  border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--paper);
+  border-radius:10px;padding:.5rem 1rem;font-weight:600;font-size:.85rem;cursor:pointer;
+  transition:background .2s,border-color .2s,transform .2s,box-shadow .2s;
+}
+.goal-chip:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.4);transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.18)}
+.goal-chip[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.goal-chip[aria-pressed="true"]:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(255,210,74,.35);filter:brightness(1.05)}
+
+/* Diff / pricing */
+.diff-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:1.8rem;max-width:800px}
+.diff-card{
+  background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.2rem 1.3rem;
+}
+.diff-card h3{font-family:var(--display);font-size:1rem;margin:0 0 .4rem}
+.diff-card p{margin:0;font-size:.9rem;opacity:.85}
+
+/* Waitlist success */
+#ok.success{
+  background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.35);
+  border-radius:12px;padding:.85rem 1.1rem;color:#4ade80;
+}
+.badges{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.2rem}
+.badge{
+  border:1.5px solid var(--border);border-radius:10px;padding:.5rem .9rem;
+  font-size:.8rem;font-weight:700;opacity:.8;
+}
+
+/* Loading */
+#loader{
+  position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:.8rem;
+  background:var(--bg);transition:opacity .5s,visibility .5s;
+}
+#loader.hide{opacity:0;visibility:hidden;pointer-events:none}
+#loader .spin{
+  width:36px;height:36px;border:3px solid rgba(255,255,255,.15);
+  border-top-color:var(--gold);border-radius:50%;animation:spin .7s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+#loader p{font-weight:700;font-size:.9rem;opacity:.7}
+
+/* Footer links */
+.footer-inner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;align-items:flex-start}
+.footer-links{display:flex;flex-wrap:wrap;gap:.8rem 1.2rem}
+.footer-links a{color:var(--paper);opacity:.7;text-decoration:none;font-size:.85rem}
+.footer-links a:hover{opacity:1;color:var(--gold)}
+
+/* Modals */
+.modal{
+  position:fixed;inset:0;z-index:80;display:flex;align-items:center;justify-content:center;
+  padding:1.5rem;background:rgba(0,0,0,.55);backdrop-filter:blur(8px);
+  opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s;
+}
+.modal.open{opacity:1;visibility:visible}
+.modal-card{
+  background:var(--card);border:1px solid var(--border);border-radius:20px;
+  padding:1.75rem;max-width:420px;width:100%;position:relative;
+  box-shadow:0 24px 60px rgba(0,0,0,.35);max-height:85vh;overflow:auto;
+}
+.modal-card h2{font-family:var(--display);font-size:1.5rem;margin:0 0 1rem}
+.modal-card p{margin:0 0 .85rem;font-size:.95rem;opacity:.9;line-height:1.5}
+.modal-close{
+  position:absolute;top:.75rem;right:.85rem;background:none;border:0;
+  color:var(--paper);font-size:1.5rem;line-height:1;cursor:pointer;opacity:.6;
+}
+.modal-close:hover{opacity:1}
+.modal-ok{margin-top:.5rem}
+
+@media (max-width:900px){
+  .nav-desktop{display:none}
+  .hamburger{display:flex}
+}
+@media (max-width:820px){
+  .svc{grid-template-columns:1fr;gap:.6rem}
+  section{justify-content:flex-start;padding-top:clamp(80px,10vh,110px)}
+  #calc{justify-content:flex-start}
+  .port-grid{grid-template-columns:1fr 1fr}
+  h1{font-size:clamp(2.2rem,9vw,3.8rem)}
+}
+@media (max-width:520px){
+  .port-grid{grid-template-columns:1fr}
+  .hd{gap:.35rem}
+  .lang button,.tab{padding:.35rem .55rem;font-size:.8rem}
+  .wild,.theme-btn{padding:.4rem .7rem;font-size:.8rem}
+  .btn{padding:.75rem 1.2rem;font-size:.9rem}
+  .mobile-menu a{font-size:1.5rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hero-line,.reveal,.reveal-left,.reveal-right,.reveal-scale,.goal-fill,.wild,.steps li,.chips .bank,.total{
+    animation:none !important;transition:none !important;opacity:1 !important;transform:none !important;
+  }
+  .reveal,.reveal-left,.reveal-right,.reveal-scale,.steps li,.chips .bank{opacity:1;transform:none}
+  .goal-fill{width:42%}
+  h2.reveal::after{animation:none;width:48px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hero-line{animation:none;opacity:1;transform:none}
+  .svc,.btn,.wild,.bank{transition:none}
+}
+</style>
+</head>
+<body>
+<canvas id="gl" aria-hidden="true"></canvas>
+
+<header>
+  <a class="logo" href="#top">SKS Fiancee</a>
+  <nav class="nav-desktop" aria-label="Main">
+    <a href="#top">Home</a>
+    <a href="#what">Services</a>
+    <a href="#goals">Goals</a>
+    <a href="#calc">Calculator</a>
+    <a href="#faq">FAQ</a>
+    <a href="#join">Join</a>
+  </nav>
+  <div class="hd">
+    <div class="lang" role="group" aria-label="Language">
+      <button data-l="en" aria-pressed="true">EN</button>
+      <button data-l="hi" aria-pressed="false">हिं</button>
+      <button data-l="or" aria-pressed="false">ଓଡ଼ି</button>
+      <button data-l="ta" aria-pressed="false">தமிழ்</button>
+    </div>
+    <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">Theme</button>
+    <button class="wild" id="wild" aria-pressed="false">Go crazy</button>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a href="#top">Home</a>
+  <a href="#what">Services</a>
+  <a href="#goals">Goals</a>
+  <a href="#calc">Calculator</a>
+  <a href="#why">Why us</a>
+  <a href="#faq">FAQ</a>
+  <a href="#join">Join</a>
+  <span class="close-hint">Tap anywhere to close</span>
+</div>
+<a href="#top" class="home-fab" id="homeFab" aria-label="Back to home" title="Home">⌂</a>
+
+<main id="top">
+  <section id="hero">
+    <div class="wrap">
+      <h1><span class="hero-line" data-t="h1a">Make</span><span class="hero-line" data-t="h1b">your money</span><span class="hero-line" data-t="h1c">move.</span></h1>
+      <p class="sub" data-t="sub">Savings, investing and loans in one account, where every rupee is something you can actually see.</p>
+      <div class="row">
+        <button type="button" class="btn solid" id="openAccountBtn" data-t="cta1">Open an account</button>
+        <a class="btn" href="#calc" data-t="grow">Watch it grow</a>
+      </div>
+      <div class="proof reveal"><span id="waitCount">12,480</span> <span data-t="proof">people already on the waitlist</span></div>
+    </div>
+  </section>
+
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker">
+      <span>NIFTY 50 <span class="up">24,812 +0.84%</span></span>
+      <span>SENSEX <span class="up">81,450 +0.79%</span></span>
+      <span>RELIANCE <span class="up">₹1,428 +1.62%</span></span>
+      <span>TCS <span class="down">₹4,185 −0.45%</span></span>
+      <span>HDFC BANK <span class="up">₹1,742 +1.18%</span></span>
+      <span>BTC <span class="up">₹72.8L +3.42%</span></span>
+      <span>NIFTY 50 <span class="up">24,812 +0.84%</span></span>
+      <span>SENSEX <span class="up">81,450 +0.79%</span></span>
+      <span>RELIANCE <span class="up">₹1,428 +1.62%</span></span>
+      <span>TCS <span class="down">₹4,185 −0.45%</span></span>
+      <span>HDFC BANK <span class="up">₹1,742 +1.18%</span></span>
+      <span>BTC <span class="up">₹72.8L +3.42%</span></span>
+    </div>
+  </div>
+
+  <div class="trust-strip reveal">
+    <span><i>✓</i> UPI deposits</span>
+    <span><i>✓</i> Bank-grade encryption</span>
+    <span><i>✓</i> Your bank stays yours</span>
+    <span><i>✓</i> Transparent fees</span>
+    <span><i>✓</i> SEBI-aligned concept</span>
+  </div>
+
+  <section id="what">
+    <div class="wrap">
+      <h2 class="reveal" data-t="h2w">One account. Three ways to move.</h2>
+      <div class="services">
+        <button type="button" class="svc reveal-left reveal-delay-1" data-action="save">
+          <h3 data-t="s1">Save</h3>
+          <p><b data-t="s1b">4.6% p.a.</b><span data-t="s1p">Interest paid daily. Withdraw any time, no penalties.</span></p>
+        </button>
+        <button type="button" class="svc reveal-right reveal-delay-2" data-action="invest">
+          <h3 data-t="s2">Invest</h3>
+          <p><b data-t="s2b">From ₹500</b><span data-t="s2p">Index funds that rebalance themselves while you do other things.</span></p>
+        </button>
+        <button type="button" class="svc reveal-left reveal-delay-3" data-action="borrow">
+          <h3 data-t="s3">Borrow</h3>
+          <p><b data-t="s3b">From 10.5% p.a.</b><span data-t="s3p">Apply in two minutes. See the full cost before you say yes.</span></p>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="wrap">
+      <h2 class="reveal" data-t="h2p">Your money at a glance</h2>
+      <p class="sub reveal reveal-delay-1" data-t="psub">A live snapshot of how your rupees are working.</p>
+      <div class="port-grid">
+        <div class="port-card reveal-scale reveal-delay-1">
+          <h3 data-t="p1">Savings</h3>
+          <div class="val" data-count="1.24" data-suffix="L">₹0</div>
+          <div class="chg up">+₹420 this month</div>
+        </div>
+        <div class="port-card reveal-scale reveal-delay-2">
+          <h3 data-t="p2">Investments</h3>
+          <div class="val" data-count="3.87" data-suffix="L">₹0</div>
+          <div class="chg up">+8.2% this year</div>
+        </div>
+        <div class="port-card reveal-scale reveal-delay-3">
+          <h3 data-t="p3">Loans</h3>
+          <div class="val" data-count="0" data-suffix="">₹0</div>
+          <div class="chg" data-t="p3c">No active loans</div>
+        </div>
+        <div class="port-card reveal-scale reveal-delay-4">
+          <h3 data-t="p4">Net Worth</h3>
+          <div class="val" data-count="5.11" data-suffix="L">₹0</div>
+          <div class="chg up">+₹12.4k this month</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <h2 class="reveal" data-t="h2h">Three steps to start.</h2>
+      <ol class="steps reveal reveal-delay-1">
+        <li><i>1</i><h3 data-t="st1">Link your bank</h3><p data-t="st1p">Connect with UPI or net banking.</p></li>
+        <li><i>2</i><h3 data-t="st2">Set a goal</h3><p data-t="st2p">Pick an amount and a date. We work out the monthly figure.</p></li>
+        <li><i>3</i><h3 data-t="grow">Watch it grow</h3><p data-t="st3p">Your balance appears as bars you can watch move.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="goals">
+    <div class="wrap">
+      <h2 class="reveal" data-t="h2g">Turn goals into progress</h2>
+      <p class="sub reveal reveal-delay-1" data-t="gsub">Pick what you’re saving for. Watch the bar fill as money moves.</p>
+      <div class="goal-chips reveal reveal-delay-1" role="group" aria-label="Goals">
+        <button class="goal-chip" data-goal="home" aria-pressed="true">Home</button>
+        <button class="goal-chip" data-goal="education" aria-pressed="false">Education</button>
+        <button class="goal-chip" data-goal="wedding" aria-pressed="false">Wedding</button>
+        <button class="goal-chip" data-goal="travel" aria-pressed="false">Travel</button>
+      </div>
+      <div class="goal-box reveal reveal-delay-2">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap">
+          <strong id="goalName" style="font-family:var(--display);font-size:1.25rem">Home down payment</strong>
+          <span id="goalAmt" style="font-family:var(--display);color:var(--gold)">₹8.4L / ₹20L</span>
+        </div>
+        <div class="goal-bar"><div class="goal-fill" id="goalFill" style="width:42%"></div></div>
+        <div class="goal-meta">
+          <span id="goalPct">42% funded</span>
+          <span id="goalTime">~2.8 years left</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="calc">
+    <div class="wrap">
+      <h2 class="reveal" data-t="h2c">Drag it. The bars are your balance.</h2>
+      <div class="panel reveal reveal-delay-1">
+        <div class="tabs" role="group" aria-label="Calculator type">
+          <button class="tab" data-m="sip" aria-pressed="true">SIP</button>
+          <button class="tab" data-m="fd" aria-pressed="false">FD</button>
+          <button class="tab" data-m="loan" aria-pressed="false">Loan</button>
+        </div>
+        <label for="m"><span id="amtL" data-t="amtS">Monthly investment</span> <output id="mo">₹5,000</output></label>
+        <input id="m" type="range" min="500" max="50000" step="500" value="5000">
+        <label for="y"><span data-t="yrs">Years</span> <output id="yo">15</output></label>
+        <input id="y" type="range" min="1" max="30" step="1" value="15">
+        <div class="total" id="total">₹0</div>
+        <p class="fine" id="infl" style="margin-bottom:.5rem"></p>
+        <p class="fine" id="fineL" data-t="fineS">Projected at 12% a year, compounded monthly. An example, not a promise.</p>
+        <div class="bar-legend" id="barLegend">
+          <div class="bar-labels" id="barLabels"></div>
+          <div class="bar-tip" id="barTip">Peak · ₹0</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="banks" class="banks">
+    <div class="wrap">
+      <h2 class="reveal" data-t="h2b">Bring your own Indian bank.</h2>
+      <p class="sub reveal reveal-delay-1" data-t="bsub">Link the account you already use. Your balances, your rupees, one view.</p>
+      <h3 class="bgroup reveal" data-t="bpub">Public sector banks</h3>
+      <div class="chips reveal">
+        <button class="bank" aria-pressed="false">State Bank of India</button>
+        <button class="bank" aria-pressed="false">Punjab National Bank</button>
+        <button class="bank" aria-pressed="false">Bank of Baroda</button>
+        <button class="bank" aria-pressed="false">Canara Bank</button>
+        <button class="bank" aria-pressed="false">Union Bank of India</button>
+      </div>
+      <h3 class="bgroup reveal" data-t="bpri">Private sector banks</h3>
+      <div class="chips reveal">
+        <button class="bank" aria-pressed="false">HDFC Bank</button>
+        <button class="bank" aria-pressed="false">ICICI Bank</button>
+        <button class="bank" aria-pressed="false">Axis Bank</button>
+        <button class="bank" aria-pressed="false">Kotak Mahindra Bank</button>
+        <button class="bank" aria-pressed="false">IndusInd Bank</button>
+      </div>
+      <p id="bankout" role="status">Pick your bank to see how linking works.</p>
+    </div>
+  </section>
+
+  <section id="why">
+    <div class="wrap">
+      <h2 class="reveal">Why SKS Fiancee</h2>
+      <p class="sub reveal reveal-delay-1">Built for people who want to see their money work — not just track it in a spreadsheet.</p>
+      <div class="diff-grid">
+        <div class="diff-card reveal reveal-delay-1">
+          <h3>See every rupee</h3>
+          <p>Balances and goals appear as 3D bars and coins you can watch grow.</p>
+        </div>
+        <div class="diff-card reveal reveal-delay-2">
+          <h3>One account</h3>
+          <p>Save, invest, and borrow without juggling five different apps.</p>
+        </div>
+        <div class="diff-card reveal reveal-delay-3">
+          <h3>Your bank, linked</h3>
+          <p>Bring SBI, HDFC, ICICI and more. We don’t replace your bank — we sit on top.</p>
+        </div>
+      </div>
+      <div class="diff-grid" style="margin-top:1rem">
+        <div class="diff-card reveal">
+          <h3>Transparent fees</h3>
+          <p>No hidden charges. Clear costs before you commit.</p>
+        </div>
+        <div class="diff-card reveal reveal-delay-1">
+          <h3>Unlike a bank app</h3>
+          <p>Bank apps show statements. We show momentum, goals, and projections.</p>
+        </div>
+        <div class="diff-card reveal reveal-delay-2">
+          <h3>Coming soon</h3>
+          <p class="badges" style="margin-top:.5rem">
+            <span class="badge">iOS</span>
+            <span class="badge">Android</span>
+            <span class="badge">Web</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="stories">
+    <div class="wrap">
+      <h2 class="reveal">What early users say</h2>
+      <div class="t-grid">
+        <div class="t-card reveal reveal-delay-1">
+          <p>“Finally an app that makes SIPs feel real. Watching the bars grow is oddly motivating.”</p>
+          <div class="who">— Priya K., Bengaluru</div>
+        </div>
+        <div class="t-card reveal reveal-delay-2">
+          <p>“Linked my HDFC account in two minutes. Love that it doesn’t ask me to leave my bank.”</p>
+          <div class="who">— Arjun M., Mumbai</div>
+        </div>
+        <div class="t-card reveal reveal-delay-3">
+          <p>“The goal tracker for my home down payment is the only finance screen I open daily.”</p>
+          <div class="who">— Sneha R., Pune</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <h2 class="reveal">Questions, answered</h2>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button type="button" aria-expanded="false">Is SKS Fiancee a real bank? <span>+</span></button>
+          <div class="faq-body">No. It’s a concept product that sits on top of your existing Indian bank accounts. Your money stays with your bank.</div>
+        </div>
+        <div class="faq-item reveal">
+          <button type="button" aria-expanded="false">Are there fees? <span>+</span></button>
+          <div class="faq-body">The concept is built around transparent pricing — no hidden charges. Final fees will be shown clearly before you use any paid feature.</div>
+        </div>
+        <div class="faq-item reveal">
+          <button type="button" aria-expanded="false">Is my data safe? <span>+</span></button>
+          <div class="faq-body">Bank linking is designed around secure UPI / net-banking style flows. Encryption and isolation of credentials are core to the concept.</div>
+        </div>
+        <div class="faq-item reveal">
+          <button type="button" aria-expanded="false">Who is this for? <span>+</span></button>
+          <div class="faq-body">Anyone in India who saves or invests monthly and wants a clearer, more visual view of progress — not just another statement screen.</div>
+        </div>
+        <div class="faq-item reveal">
+          <button type="button" aria-expanded="false">When does it launch? <span>+</span></button>
+          <div class="faq-body">We’re collecting early access interest now. Join the waitlist and we’ll write when there’s news.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="join" class="cta">
+    <div class="wrap">
+      <h2 class="reveal" data-t="h2j">Your money is already moving. Join it.</h2>
+      <p class="sub reveal reveal-delay-1" style="margin-left:auto;margin-right:auto;text-align:center">Get early access. No spam — just launch updates.</p>
+      <form id="f" class="reveal reveal-delay-1">
+        <input type="email" id="e" placeholder="you@email.com" aria-label="Email address" required>
+        <button class="btn solid" type="submit" data-t="join">Get early access</button>
+      </form>
+      <div id="ok" role="status"></div>
+      <div class="badges reveal" style="justify-content:center">
+        <span class="badge">Free to join</span>
+        <span class="badge">India-first</span>
+        <span class="badge">Cancel anytime</span>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="footer-inner wrap" style="max-width:1100px;margin:0 auto;padding:0 clamp(14px,4vw,48px)">
+    <div>
+      <strong style="font-family:var(--display)">SKS Fiancee</strong>
+      <p data-t="foot" style="margin:.5rem 0 0;max-width:360px">SKS Fiancee is a concept brand. Figures shown are illustrative. Bank names are shown for illustration only and imply no partnership. Investing involves risk.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#what">Services</a>
+      <a href="#faq">FAQ</a>
+      <a href="#join">Early access</a>
+      <a href="#privacy" data-modal="modalPrivacy">Privacy</a>
+      <a href="#terms" data-modal="modalTerms">Terms</a>
+      <a href="mailto:hello@sksfiancee.com">Contact</a>
+    </div>
+  </div>
+</footer>
+<div id="loader"><div class="spin"></div><p>Loading SKS Fiancee…</p></div>
+
+<div class="modal" id="modalPrivacy" role="dialog" aria-labelledby="privacyTitle" aria-hidden="true">
+  <div class="modal-card">
+    <button type="button" class="modal-close" data-close="modalPrivacy" aria-label="Close">×</button>
+    <h2 id="privacyTitle">Privacy</h2>
+    <p>SKS Fiancee is a concept demo. We do not collect, store, or share personal data from this page beyond what you type into the waitlist field in your own browser session.</p>
+    <p>Email addresses entered for early access stay on your device in this session and are not sent to a server in this demo.</p>
+    <p>Bank names and market figures are illustrative only.</p>
+    <button type="button" class="btn solid modal-ok" data-close="modalPrivacy">Got it</button>
+  </div>
+</div>
+<div class="modal" id="modalTerms" role="dialog" aria-labelledby="termsTitle" aria-hidden="true">
+  <div class="modal-card">
+    <button type="button" class="modal-close" data-close="modalTerms" aria-label="Close">×</button>
+    <h2 id="termsTitle">Terms</h2>
+    <p>This website is a non-commercial concept for demonstration. Nothing here is an offer of financial services, investment advice, or a banking product.</p>
+    <p>Figures, returns, and rates are examples only. Investing involves risk.</p>
+    <p>By using this demo you agree it is for illustration and education.</p>
+    <button type="button" class="btn solid modal-ok" data-close="modalTerms">Got it</button>
+  </div>
+</div>
+
+<div class="modal" id="modalAccount" role="dialog" aria-labelledby="accountTitle" aria-hidden="true">
+  <div class="modal-card" style="max-width:520px">
+    <button type="button" class="modal-close" data-close="modalAccount" aria-label="Close">×</button>
+    <h2 id="accountTitle">Open an account</h2>
+    <p>Choose your bank to link. Your money stays with your bank — we only connect the view.</p>
+    <h3 class="bgroup" style="margin-top:.5rem">Public sector</h3>
+    <div class="bank-modal-grid" id="modalBanksPublic">
+      <button type="button" class="bank" data-bank="State Bank of India">State Bank of India</button>
+      <button type="button" class="bank" data-bank="Punjab National Bank">Punjab National Bank</button>
+      <button type="button" class="bank" data-bank="Bank of Baroda">Bank of Baroda</button>
+      <button type="button" class="bank" data-bank="Canara Bank">Canara Bank</button>
+      <button type="button" class="bank" data-bank="Union Bank of India">Union Bank of India</button>
+    </div>
+    <h3 class="bgroup">Private sector</h3>
+    <div class="bank-modal-grid" id="modalBanksPrivate">
+      <button type="button" class="bank" data-bank="HDFC Bank">HDFC Bank</button>
+      <button type="button" class="bank" data-bank="ICICI Bank">ICICI Bank</button>
+      <button type="button" class="bank" data-bank="Axis Bank">Axis Bank</button>
+      <button type="button" class="bank" data-bank="Kotak Mahindra Bank">Kotak Mahindra Bank</button>
+      <button type="button" class="bank" data-bank="IndusInd Bank">IndusInd Bank</button>
+    </div>
+    <p id="modalBankStatus" style="min-height:1.4em;font-weight:700;color:var(--gold)"></p>
+    <div class="row" style="margin-top:.5rem">
+      <button type="button" class="btn solid" id="modalContinue" disabled>Continue</button>
+      <button type="button" class="btn" data-close="modalAccount">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var $ = function(id){return document.getElementById(id)};
+
+  // ---------- calculator ----------
+  var mode = 'sip';
+  var startRain = function(){};
+  var lastFin = 0, lastY = 0;
+  function renderInfl(){ if(!T) return; if(mode==='loan'){ $('infl').textContent = ''; return; } $('infl').textContent = tr('infl').replace('{v}', fmt(lastFin/Math.pow(1.06,lastY))); }
+  function fv(m, yrs, md){
+    md = md || mode;
+    if(md === 'fd') return m*Math.pow(1+.07/4, Math.round(yrs*4));
+    if(md === 'loan'){
+      var r = 0.105/12, n = Math.round(yrs*12);
+      if(r===0) return m/n;
+      return m * r * Math.pow(1+r,n) / (Math.pow(1+r,n)-1);
+    }
+    var r = .12/12, n = Math.round(yrs*12);
+    return m*(Math.pow(1+r,n)-1)/r;
+  }
+  var MAXV = {sip: fv(50000,30,'sip'), fd: fv(1000000,10,'fd'), loan: fv(5000000,20,'loan')};
+  var B = 8, targets = new Array(B).fill(.2);
+  function fmt(n){ return n >= 1e7 ? '₹' + (n/1e7).toFixed(2) + ' Cr' : '₹' + Math.round(n).toLocaleString('en-IN'); }
+  function updateBarLabels(){
+    var labels = $('barLabels');
+    var tip = $('barTip');
+    if(!labels) return;
+    var y = +$('y').value;
+    var html = '';
+    for(var i=0;i<B;i++){
+      var yr = Math.max(1, Math.round(y * (i+1) / B));
+      html += '<span>Y' + yr + '</span>';
+    }
+    labels.innerHTML = html;
+    if(tip){
+      tip.textContent = (mode === 'loan' ? 'EMI · ' : 'Peak · ') + ($('total') ? $('total').textContent : '₹0');
+      tip.className = 'bar-tip mode-' + mode;
+    }
+  }
+  function updateCalc(){
+    var m = +$('m').value, y = +$('y').value;
+    $('mo').textContent = fmt(m); $('yo').textContent = y;
+    var fin = fv(m,y); $('total').textContent = fmt(fin); lastFin = fin; lastY = y; renderInfl();
+    for(var i=0;i<B;i++){
+      var v = mode==='loan' ? fin * (i+1)/B : fv(m, y*(i+1)/B);
+      targets[i] = .25 + 4.6*Math.sqrt(Math.min(v, MAXV[mode]||MAXV.sip)/(MAXV[mode]||MAXV.sip));
+    }
+    updateBarLabels();
+  }
+  $('m').addEventListener('input',updateCalc);
+  $('y').addEventListener('input',updateCalc);
+  var cfg = {
+    sip:{min:500,max:50000,step:500,val:5000,ymax:30,yval:15},
+    fd:{min:10000,max:1000000,step:10000,val:100000,ymax:10,yval:5},
+    loan:{min:50000,max:5000000,step:50000,val:500000,ymax:20,yval:5}
+  };
+  function setMode(md){
+    mode = md; var c = cfg[md], mm = $('m'), yy = $('y');
+    mm.min = c.min; mm.max = c.max; mm.step = c.step; mm.value = c.val; yy.max = c.ymax; yy.value = c.yval;
+    document.querySelectorAll('.tab').forEach(function(t){ t.setAttribute('aria-pressed', t.dataset.m === md ? 'true' : 'false'); });
+    $('amtL').dataset.t = md === 'sip' ? 'amtS' : (md === 'fd' ? 'amtF' : 'amtL');
+    $('fineL').dataset.t = md === 'sip' ? 'fineS' : (md === 'fd' ? 'fineF' : 'fineL');
+    if(typeof recolorBars === 'function') recolorBars(md);
+    updateCalc(); applyLang();
+    updateBarLabels();
+  }
+  document.querySelectorAll('.tab').forEach(function(t){ t.addEventListener('click', function(){ setMode(t.dataset.m); }); });
+  updateCalc();
+
+  // Theme toggle
+  var themeBtn = $('themeBtn');
+  if(themeBtn){
+    themeBtn.addEventListener('click', function(){
+      var root = document.documentElement;
+      var next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      root.setAttribute('data-theme', next);
+      try{ localStorage.setItem('vl-theme', next); }catch(e){}
+      playTone(next === 'light' ? 520 : 380, 0.06, 'sine');
+    });
+    try{
+      var saved = localStorage.getItem('vl-theme');
+      if(saved) document.documentElement.setAttribute('data-theme', saved);
+    }catch(e){}
+  }
+
+  // Soft sound effects (Web Audio)
+  var audioCtx = null;
+  function ensureAudio(){
+    if(!audioCtx){
+      try{ audioCtx = new (window.AudioContext || window.webkitAudioContext)(); }catch(e){}
+    }
+    if(audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
+    return audioCtx;
+  }
+  function playTone(freq, dur, type){
+    if(reduce) return;
+    var ctx = ensureAudio(); if(!ctx) return;
+    var osc = ctx.createOscillator();
+    var gain = ctx.createGain();
+    osc.type = type || 'sine';
+    osc.frequency.value = freq;
+    gain.gain.setValueAtTime(0.08, ctx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + dur);
+    osc.connect(gain); gain.connect(ctx.destination);
+    osc.start(ctx.currentTime);
+    osc.stop(ctx.currentTime + dur);
+  }
+  function playCoin(){
+    playTone(1200, 0.08, 'triangle');
+    setTimeout(function(){ playTone(1600, 0.06, 'triangle'); }, 40);
+  }
+  function playClick(){ playTone(600, 0.04, 'sine'); }
+
+  // Mobile menu
+  var hamburger = $('hamburger');
+  var mobileMenu = $('mobileMenu');
+  function closeMenu(){
+    if(!hamburger || !mobileMenu) return;
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+  }
+  function openMenu(){
+    hamburger.classList.add('open');
+    mobileMenu.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    mobileMenu.setAttribute('aria-hidden', 'false');
+    playClick();
+  }
+  if(hamburger && mobileMenu){
+    hamburger.addEventListener('click', function(e){
+      e.stopPropagation();
+      if(mobileMenu.classList.contains('open')) closeMenu();
+      else openMenu();
+    });
+    mobileMenu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ closeMenu(); playClick(); });
+    });
+    mobileMenu.addEventListener('click', function(e){
+      if(e.target === mobileMenu || e.target.classList.contains('close-hint')) closeMenu();
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape') closeMenu();
+    });
+  }
+
+  // Waitlist counter gentle animation
+  (function(){
+    var el = $('waitCount'); if(!el) return;
+    var target = 12480, cur = 11800;
+    function tick(){
+      cur += Math.ceil((target-cur)*0.08);
+      if(cur >= target){ el.textContent = target.toLocaleString('en-IN'); return; }
+      el.textContent = cur.toLocaleString('en-IN');
+      requestAnimationFrame(tick);
+    }
+    setTimeout(tick, 800);
+  })();
+
+  $('f').addEventListener('submit',function(ev){
+    ev.preventDefault();
+    lastEmail = $('e').value;
+    var ok = $('ok');
+    if(ok){
+      ok.className = 'success';
+      ok.innerHTML = 'You’re on the list. We’ll write to <strong>' + lastEmail + '</strong>. Meanwhile, try the calculator above.';
+    }
+    applyLang();
+    startRain();
+    playCoin();
+    setTimeout(playCoin, 120);
+    $('e').value = '';
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-item button').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.parentElement;
+      var open = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('open'); i.querySelector('button').setAttribute('aria-expanded','false'); });
+      if(!open){ item.classList.add('open'); btn.setAttribute('aria-expanded','true'); playClick(); }
+    });
+  });
+
+  // Goal switcher
+  var goals = {
+    home:      { name:'Home down payment', cur:'₹8.4L', total:'₹20L', pct:42, time:'~2.8 years left', w:42 },
+    education: { name:'Education fund', cur:'₹3.2L', total:'₹12L', pct:27, time:'~4.1 years left', w:27 },
+    wedding:   { name:'Wedding', cur:'₹5.1L', total:'₹10L', pct:51, time:'~1.9 years left', w:51 },
+    travel:    { name:'Travel fund', cur:'₹1.8L', total:'₹4L', pct:45, time:'~1.2 years left', w:45 }
+  };
+  document.querySelectorAll('.goal-chip').forEach(function(chip){
+    chip.addEventListener('click', function(){
+      document.querySelectorAll('.goal-chip').forEach(function(c){ c.setAttribute('aria-pressed','false'); });
+      chip.setAttribute('aria-pressed','true');
+      var g = goals[chip.getAttribute('data-goal')];
+      if(!g) return;
+      var gn = $('goalName'), ga = $('goalAmt'), gp = $('goalPct'), gt = $('goalTime'), gf = $('goalFill');
+      if(gn) gn.textContent = g.name;
+      if(ga) ga.textContent = g.cur + ' / ' + g.total;
+      if(gp) gp.textContent = g.pct + '% funded';
+      if(gt) gt.textContent = g.time;
+      if(gf){ gf.style.width = '0'; requestAnimationFrame(function(){ gf.style.width = g.w + '%'; }); }
+      playClick();
+    });
+  });
+
+  // Hide loader when ready
+  window.addEventListener('load', function(){
+    setTimeout(function(){
+      var ld = $('loader');
+      if(ld) ld.classList.add('hide');
+    }, 600);
+  });
+
+  // Show floating home button after scrolling
+  var homeFab = $('homeFab');
+  if(homeFab){
+    function updateFab(){
+      if(window.scrollY > 400) homeFab.classList.add('show');
+      else homeFab.classList.remove('show');
+    }
+    window.addEventListener('scroll', updateFab, {passive:true});
+    updateFab();
+  }
+
+  // Smooth scroll for all in-page links
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var id = a.getAttribute('href');
+      if(!id || id === '#') return;
+      // Modal links
+      if(a.getAttribute('data-modal')){
+        e.preventDefault();
+        var mid = a.getAttribute('data-modal');
+        var modal = $(mid);
+        if(modal){ modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); playClick(); }
+        return;
+      }
+      var target = document.querySelector(id);
+      if(target){
+        e.preventDefault();
+        target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+        closeMenu();
+      }
+    });
+  });
+
+  // Modal close
+  function closeModal(id){
+    var m = $(id);
+    if(m){ m.classList.remove('open'); m.setAttribute('aria-hidden','true'); }
+  }
+  document.querySelectorAll('[data-close]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      closeModal(btn.getAttribute('data-close'));
+      playClick();
+    });
+  });
+  document.querySelectorAll('.modal').forEach(function(modal){
+    modal.addEventListener('click', function(e){
+      if(e.target === modal) closeModal(modal.id);
+    });
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){
+      document.querySelectorAll('.modal.open').forEach(function(m){ closeModal(m.id); });
+    }
+  });
+
+  // Language buttons — ensure click always works
+  document.querySelectorAll('.lang button').forEach(function(b){
+    b.addEventListener('click', function(){
+      playClick();
+    });
+  });
+
+  // Calculator tabs sound
+  document.querySelectorAll('.tab').forEach(function(t){
+    t.addEventListener('click', function(){ playClick(); });
+  });
+
+  // Open account → bank menu modal
+  function openModal(id){
+    var m = $(id);
+    if(m){ m.classList.add('open'); m.setAttribute('aria-hidden','false'); playClick(); }
+  }
+  var openAccountBtn = $('openAccountBtn');
+  if(openAccountBtn){
+    openAccountBtn.addEventListener('click', function(){
+      openModal('modalAccount');
+    });
+  }
+  var selectedModalBank = '';
+  document.querySelectorAll('#modalAccount .bank').forEach(function(b){
+    b.addEventListener('click', function(){
+      document.querySelectorAll('#modalAccount .bank').forEach(function(x){ x.setAttribute('aria-pressed','false'); });
+      b.setAttribute('aria-pressed','true');
+      selectedModalBank = b.getAttribute('data-bank') || b.textContent;
+      var st = $('modalBankStatus');
+      if(st) st.textContent = 'Selected: ' + selectedModalBank;
+      var cont = $('modalContinue');
+      if(cont) cont.disabled = false;
+      playClick();
+    });
+  });
+  var modalContinue = $('modalContinue');
+  if(modalContinue){
+    modalContinue.addEventListener('click', function(){
+      if(!selectedModalBank) return;
+      // Mirror selection on main banks section
+      document.querySelectorAll('section#banks .bank').forEach(function(x){
+        var on = x.textContent.trim() === selectedModalBank;
+        x.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+      selBank = selectedModalBank;
+      applyLang();
+      closeModal('modalAccount');
+      playCoin();
+      var join = document.getElementById('join');
+      if(join) join.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+      var ok = $('ok');
+      if(ok){
+        ok.className = 'success';
+        ok.innerHTML = 'Bank selected: <strong>' + selectedModalBank + '</strong>. Enter your email below for early access.';
+      }
+    });
+  }
+
+  // Save / Invest / Borrow → open calculator in right mode
+  document.querySelectorAll('.svc[data-action]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var act = btn.getAttribute('data-action');
+      playClick();
+      if(act === 'save') setMode('fd');
+      else if(act === 'invest') setMode('sip');
+      else if(act === 'borrow') setMode('loan');
+      var calc = document.getElementById('calc');
+      if(calc) calc.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+    });
+  });
+
+  // Ripple on click for interactive controls
+  function attachRipple(el){
+    if(!el || el.dataset.ripple === '1') return;
+    el.dataset.ripple = '1';
+    el.classList.add('ripple-host');
+    el.addEventListener('pointerdown', function(e){
+      if(el.disabled || reduce) return;
+      var rect = el.getBoundingClientRect();
+      var size = Math.max(rect.width, rect.height);
+      var ink = document.createElement('span');
+      ink.className = 'ripple-ink';
+      ink.style.width = ink.style.height = size + 'px';
+      ink.style.left = (e.clientX - rect.left - size / 2) + 'px';
+      ink.style.top = (e.clientY - rect.top - size / 2) + 'px';
+      el.appendChild(ink);
+      setTimeout(function(){ if(ink.parentNode) ink.parentNode.removeChild(ink); }, 560);
+    });
+  }
+  document.querySelectorAll('.btn, .wild, .theme-btn, .bank, .goal-chip, .tab, .lang button, .hamburger, .svc').forEach(attachRipple);
+
+  // ---------- languages: English, Hindi, Odia ----------
+  var lang = 'en', selBank = '', lastEmail = '';
+  var T = {
+    en:{wildOn:'Calm down',wildOff:'Go crazy',h1a:'Make',h1b:'your money',h1c:'move.',sub:'Savings, investing and loans in one account, where every rupee is something you can actually see.',cta1:'Open an account',grow:'Watch it grow',proof:'people already on the waitlist',h2w:'One account. Three ways to move.',s1:'Save',s1b:'4.6% p.a.',s1p:'Interest paid daily. Withdraw any time, no penalties.',s2:'Invest',s2b:'From ₹500',s2p:'Index funds that rebalance themselves while you do other things.',s3:'Borrow',s3b:'From 10.5% p.a.',s3p:'Apply in two minutes. See the full cost before you say yes.',h2p:'Your money at a glance',psub:'A live snapshot of how your rupees are working.',p1:'Savings',p2:'Investments',p3:'Loans',p3c:'No active loans',p4:'Net Worth',h2h:'Three steps to start.',st1:'Link your bank',st1p:'Connect with UPI or net banking.',st2:'Set a goal',st2p:'Pick an amount and a date. We work out the monthly figure.',st3p:'Your balance appears as bars you can watch move.',h2g:'Turn goals into progress',gsub:'Pick what you’re saving for. Watch the bar fill as money moves.',gname:'Home down payment',gleft:'42% funded',gtime:'~2.8 years left',gcta:'Adjust goal',h2c:'Drag it. The bars are your balance.',amtS:'Monthly investment',amtF:'Lump sum',amtL:'Loan amount',yrs:'Years',emi:'Monthly EMI',fineS:'Projected at 12% a year, compounded monthly. An example, not a promise.',fineF:'Projected at 7% a year, compounded quarterly. An example, not a promise.',fineL:'EMI at 10.5% p.a. for the selected tenure. Illustrative only.',h2b:'Bring your own Indian bank.',bsub:'Link the account you already use. Your balances, your rupees, one view.',bpub:'Public sector banks',bpri:'Private sector banks',bankHint:'Pick your bank to see how linking works.',bankMsg:'Link {b} with UPI or net banking and see both balances in one place.',h2j:'Your money is already moving. Join it.',join:'Get early access',okMsg:'You’re on the list. We’ll write to {e}.',infl:'In today’s money (6% inflation): {v}',foot:'SKS Fiancee is a concept brand. Figures shown are illustrative. Bank names are shown for illustration only and imply no partnership. Investing involves risk.'},
+    hi:{wildOn:'शांत मोड',wildOff:'पागल मोड',h1a:'अपने पैसे को',h1b:'दीजिए',h1c:'रफ़्तार।',sub:'बचत, निवेश और लोन एक ही खाते में, जहाँ हर रुपया आपको साफ़ दिखता है।',cta1:'खाता खोलें',grow:'बढ़ते देखें',proof:'लोग पहले से वेटलिस्ट पर हैं',h2w:'एक खाता। आगे बढ़ने के तीन रास्ते।',s1:'बचत',s1b:'4.6% वार्षिक',s1p:'रोज़ ब्याज। जब चाहें निकालें, कोई जुर्माना नहीं।',s2:'निवेश',s2b:'₹500 से',s2p:'इंडेक्स फंड जो अपने आप संतुलित होते हैं।',s3:'लोन',s3b:'10.5% वार्षिक से',s3p:'दो मिनट में आवेदन। पूरी लागत पहले देखें।',h2p:'आपके पैसे एक नज़र में',psub:'देखें आपके रुपये कैसे काम कर रहे हैं।',p1:'बचत',p2:'निवेश',p3:'लोन',p3c:'कोई सक्रिय लोन नहीं',p4:'कुल संपत्ति',h2h:'शुरू करने के तीन कदम।',st1:'अपना बैंक जोड़ें',st1p:'UPI या नेट बैंकिंग से जुड़ें।',st2:'लक्ष्य तय करें',st2p:'रकम और तारीख चुनें।',st3p:'बैलेंस बार के रूप में दिखता है।',h2g:'लक्ष्य को प्रगति में बदलें',gsub:'किसके लिए बचा रहे हैं, चुनें। बार भरता देखें।',gname:'घर का डाउन पेमेंट',gleft:'42% पूरा',gtime:'~2.8 साल बाकी',gcta:'लक्ष्य बदलें',h2c:'खींचिए। ये बार आपका बैलेंस हैं।',amtS:'मासिक निवेश',amtF:'एकमुश्त रकम',amtL:'लोन राशि',yrs:'वर्ष',emi:'मासिक EMI',fineS:'12% वार्षिक अनुमान। उदाहरण मात्र।',fineF:'7% वार्षिक अनुमान। उदाहरण मात्र।',fineL:'10.5% पर EMI। केवल उदाहरण।',h2b:'अपना भारतीय बैंक साथ लाएँ।',bsub:'जो खाता आप इस्तेमाल करते हैं, उसे जोड़ें।',bpub:'सरकारी बैंक',bpri:'निजी बैंक',bankHint:'अपना बैंक चुनें।',bankMsg:'{b} को UPI से जोड़ें।',h2j:'आपका पैसा पहले से चल रहा है। साथ आइए।',join:'जल्दी पहुँच पाएँ',okMsg:'आप सूची में हैं। हम {e} पर लिखेंगे।',infl:'आज के पैसों में: {v}',foot:'SKS Fiancee एक कॉन्सेप्ट ब्रांड है। आँकड़े उदाहरण मात्र हैं। निवेश में जोखिम है।'},
+    or:{wildOn:'ଶାନ୍ତ ମୋଡ୍',wildOff:'ପାଗଳ ମୋଡ୍',h1a:'ନିଜ ଟଙ୍କାକୁ',h1b:'ଦିଅନ୍ତୁ',h1c:'ଗତି।',sub:'ସଞ୍ଚୟ, ନିବେଶ ଓ ଋଣ ଗୋଟିଏ ଖାତାରେ।',cta1:'ଖାତା ଖୋଲନ୍ତୁ',grow:'ବଢ଼ିବା ଦେଖନ୍ତୁ',proof:'ଲୋକ ଆଗରୁ ୱେଟଲିଷ୍ଟରେ ଅଛନ୍ତି',h2w:'ଗୋଟିଏ ଖାତା। ତିନି ଉପାୟ।',s1:'ସଞ୍ଚୟ',s1b:'ବାର୍ଷିକ 4.6%',s1p:'ପ୍ରତିଦିନ ସୁଧ।',s2:'ନିବେଶ',s2b:'₹500 ରୁ',s2p:'ଇଣ୍ଡେକ୍ସ ଫଣ୍ଡ।',s3:'ଋଣ',s3b:'10.5% ରୁ',s3p:'ଦୁଇ ମିନିଟରେ ଆବେଦନ।',h2p:'ଆପଣଙ୍କ ଟଙ୍କା ଏକ ନଜରରେ',psub:'ଦେଖନ୍ତୁ ଆପଣଙ୍କ ଟଙ୍କା କିପରି କାମ କରୁଛି।',p1:'ସଞ୍ଚୟ',p2:'ନିବେଶ',p3:'ଋଣ',p3c:'କୌଣସି ଋଣ ନାହିଁ',p4:'ମୋଟ ସମ୍ପତ୍ତି',h2h:'ତିନୋଟି ପଦକ୍ଷେପ।',st1:'ବ୍ୟାଙ୍କ ଯୋଡ଼ନ୍ତୁ',st1p:'UPI ରେ ଯୋଡ଼ନ୍ତୁ।',st2:'ଲକ୍ଷ୍ୟ ସ୍ଥିର କରନ୍ତୁ',st2p:'ରାଶି ଓ ତାରିଖ ବାଛନ୍ତୁ।',st3p:'ବାଲାନ୍ସ ବାର୍ ରୂପରେ।',h2g:'ଲକ୍ଷ୍ୟକୁ ପ୍ରଗତିରେ ବଦଳାନ୍ତୁ',gsub:'କଣ ପାଇଁ ସଞ୍ଚୟ କରୁଛନ୍ତି ବାଛନ୍ତୁ।',gname:'ଘର ଡାଉନ୍ ପେମେଣ୍ଟ',gleft:'42% ପୂରଣ',gtime:'~2.8 ବର୍ଷ ବାକି',gcta:'ଲକ୍ଷ୍ୟ ବଦଳାନ୍ତୁ',h2c:'ଟାଣନ୍ତୁ। ଏହି ବାର୍ ଆପଣଙ୍କ ବାଲାନ୍ସ।',amtS:'ମାସିକ ନିବେଶ',amtF:'ଏକକାଳୀନ',amtL:'ଋଣ ରାଶି',yrs:'ବର୍ଷ',emi:'ମାସିକ EMI',fineS:'12% ଅନୁମାନ। ଉଦାହରଣ।',fineF:'7% ଅନୁମାନ। ଉଦାହରଣ।',fineL:'10.5% ରେ EMI। ଉଦାହରଣ।',h2b:'ନିଜ ବ୍ୟାଙ୍କ ଆଣନ୍ତୁ।',bsub:'ବ୍ୟବହୃତ ଖାତା ଯୋଡ଼ନ୍ତୁ।',bpub:'ସରକାରୀ ବ୍ୟାଙ୍କ',bpri:'ଘରୋଇ ବ୍ୟାଙ୍କ',bankHint:'ବ୍ୟାଙ୍କ ବାଛନ୍ତୁ।',bankMsg:'{b} କୁ UPI ରେ ଲିଙ୍କ କରନ୍ତୁ।',h2j:'ଟଙ୍କା ଆଗରୁ ଚାଲୁଛି। ଯୋଗ ଦିଅନ୍ତୁ।',join:'ଶୀଘ୍ର ପ୍ରବେଶ',okMsg:'ଆପଣ ତାଲିକାରେ। {e} କୁ ଲେଖିବୁ।',infl:'ଆଜିର ଟଙ୍କାରେ: {v}',foot:'SKS Fiancee ଏକ କନ୍ସେପ୍ଟ ବ୍ରାଣ୍ଡ। ଅଙ୍କ ଉଦାହରଣ ମାତ୍ର।'},
+    ta:{wildOn:'அமைதி',wildOff:'பைத்தியம்',h1a:'உங்கள் பணத்தை',h1b:'நகர்த்துங்கள்',h1c:'.',sub:'சேமிப்பு, முதலீடு மற்றும் கடன் ஒரே கணக்கில்.',cta1:'கணக்கு திறக்க',grow:'வளர்வதைப் பாருங்கள்',proof:'பேர் ஏற்கனவே காத்திருப்பு பட்டியலில்',h2w:'ஒரு கணக்கு. மூன்று வழிகள்.',s1:'சேமி',s1b:'ஆண்டுக்கு 4.6%',s1p:'தினசரி வட்டி. எப்போது வேண்டுமானாலும் எடுக்கலாம்.',s2:'முதலீடு',s2b:'₹500 முதல்',s2p:'குறியீட்டு நிதிகள் தாங்களே சமநிலைப்படுத்தும்.',s3:'கடன்',s3b:'10.5% முதல்',s3p:'இரண்டு நிமிடத்தில் விண்ணப்பம்.',h2p:'உங்கள் பணம் ஒரு பார்வையில்',psub:'உங்கள் ரூபாய் எப்படி வேலை செய்கிறது என்பதைப் பாருங்கள்.',p1:'சேமிப்பு',p2:'முதலீடுகள்',p3:'கடன்கள்',p3c:'செயலில் கடன் இல்லை',p4:'நிகர மதிப்பு',h2h:'தொடங்க மூன்று படிகள்.',st1:'வங்கியை இணைக்கவும்',st1p:'UPI அல்லது நெட் பேங்கிங்.',st2:'இலக்கை அமைக்கவும்',st2p:'தொகை மற்றும் தேதியைத் தேர்ந்தெடுக்கவும்.',st3p:'இருப்பு பட்டைகளாகத் தோன்றும்.',h2g:'இலக்குகளை முன்னேற்றமாக மாற்றுங்கள்',gsub:'எதற்காக சேமிக்கிறீர்கள் என்பதைத் தேர்ந்தெடுக்கவும்.',gname:'வீட்டு முன்பணம்',gleft:'42% நிதியளிக்கப்பட்டது',gtime:'~2.8 ஆண்டுகள் மீதம்',gcta:'இலக்கை மாற்று',h2c:'இழுக்கவும். இவை உங்கள் இருப்பு பட்டைகள்.',amtS:'மாதாந்திர முதலீடு',amtF:'மொத்தத் தொகை',amtL:'கடன் தொகை',yrs:'ஆண்டுகள்',emi:'மாதாந்திர EMI',fineS:'12% ஆண்டு மதிப்பீடு. உதாரணம் மட்டும்.',fineF:'7% ஆண்டு மதிப்பீடு. உதாரணம் மட்டும்.',fineL:'10.5% இல் EMI. உதாரணம் மட்டும்.',h2b:'உங்கள் இந்திய வங்கியைக் கொண்டு வாருங்கள்.',bsub:'நீங்கள் பயன்படுத்தும் கணக்கை இணைக்கவும்.',bpub:'பொதுத்துறை வங்கிகள்',bpri:'தனியார் வங்கிகள்',bankHint:'வங்கியைத் தேர்ந்தெடுக்கவும்.',bankMsg:'{b} ஐ UPI மூலம் இணைக்கவும்.',h2j:'உங்கள் பணம் ஏற்கனவே நகர்கிறது. சேருங்கள்.',join:'முன்கூட்டிய அணுகல்',okMsg:'நீங்கள் பட்டியலில் உள்ளீர்கள். {e} க்கு எழுதுவோம்.',infl:'இன்றைய பணத்தில்: {v}',foot:'SKS Fiancee ஒரு கருத்து பிராண்ட். எண்கள் உதாரணம் மட்டும். முதலீட்டில் ஆபத்து உள்ளது.'}
+  };
+  function tr(k){ var d = T[lang]; return (d && d[k]) || T.en[k]; }
+  function applyLang(){
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-t]').forEach(function(el){ el.textContent = tr(el.dataset.t); });
+    $('bankout').textContent = selBank ? tr('bankMsg').replace('{b}', selBank) : tr('bankHint');
+    var okEl = $('ok');
+    if(okEl){
+      if(lastEmail){
+        okEl.className = 'success';
+        okEl.innerHTML = tr('okMsg').replace('{e}', '<strong>'+lastEmail+'</strong>') + ' Try the calculator above.';
+      } else {
+        okEl.className = '';
+        okEl.textContent = '';
+      }
+    }
+    $('wild').textContent = tr(wildT ? 'wildOn' : 'wildOff'); renderInfl();
+    document.querySelectorAll('.lang button').forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.l === lang ? 'true' : 'false'); });
+  }
+  document.querySelectorAll('.lang button').forEach(function(b){ b.addEventListener('click', function(){ lang = b.dataset.l; applyLang(); }); });
+  renderInfl();
+
+  // ---------- bank picker ----------
+  var bankBtns = document.querySelectorAll('.bank');
+  bankBtns.forEach(function(b){
+    b.addEventListener('click',function(){
+      bankBtns.forEach(function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      selBank = b.textContent; applyLang();
+      playClick();
+    });
+  });
+
+  // ---------- wild mode ----------
+  var wildT = 0, wild = 0;
+  $('wild').addEventListener('click',function(){
+    wildT = wildT ? 0 : 1;
+    this.setAttribute('aria-pressed', wildT ? 'true' : 'false');
+    applyLang();
+    if(wildT) playCoin();
+    else playTone(300, 0.08, 'sine');
+  });
+
+  // Soft tick when dragging calculator sliders
+  var lastTick = 0;
+  ['m','y'].forEach(function(id){
+    var el = $(id);
+    if(!el) return;
+    el.addEventListener('input', function(){
+      var now = Date.now();
+      if(now - lastTick > 80){ playTone(800 + Math.random()*400, 0.03, 'sine'); lastTick = now; }
+    });
+  });
+
+  // ---------- 3D scene ----------
+  var canvas = $('gl'), renderer;
+  try{
+    renderer = new THREE.WebGLRenderer({canvas:canvas, antialias:true, alpha:true});
+  }catch(e){ document.body.classList.add('nogl'); return; }
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio||1, 2));
+  renderer.outputEncoding = THREE.sRGBEncoding;
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.15;
+  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+  var scene = new THREE.Scene();
+  var camera = new THREE.PerspectiveCamera(45,1,.1,100);
+  camera.position.set(0,0,10);
+  // studio reflections: a tiny procedural room with softboxes, so metal has something to mirror
+  var pm = new THREE.PMREMGenerator(renderer);
+  var envScene = new THREE.Scene();
+  envScene.add(new THREE.Mesh(new THREE.BoxGeometry(30,30,30), new THREE.MeshBasicMaterial({color:0x2a3cff, side:THREE.BackSide})));
+  function panel(c,i,x,y,z,w,h){
+    var pl = new THREE.Mesh(new THREE.PlaneGeometry(w,h), new THREE.MeshBasicMaterial({color:new THREE.Color(c).multiplyScalar(i), side:THREE.DoubleSide}));
+    pl.position.set(x,y,z); pl.lookAt(0,0,0); envScene.add(pl);
+  }
+  panel(0xffffff,6,0,12,4,14,5);
+  panel(0xffe2a8,4,10,2,6,4,10);
+  panel(0xff6fb5,3,-10,-2,4,4,10);
+  panel(0xffffff,3,0,-6,10,10,2);
+  scene.environment = pm.fromScene(envScene,.02).texture;
+  pm.dispose();
+
+  var key = new THREE.DirectionalLight(0xfff1d6,1.6);
+  key.position.set(4,10,6); key.castShadow = true;
+  key.shadow.mapSize.set(1024,1024); key.shadow.bias = -.0005;
+  var sc = key.shadow.camera; sc.left=-12; sc.right=12; sc.top=12; sc.bottom=-12; sc.near=1; sc.far=40;
+  scene.add(key);
+  var rim = new THREE.PointLight(0xff6fb5,1.2,50); rim.position.set(-6,-3,5); scene.add(rim);
+  scene.add(new THREE.AmbientLight(0xffffff,.25));
+  scene.fog = new THREE.Fog(0x1f2bff, 11, 26);
+  var floor = new THREE.Mesh(new THREE.PlaneGeometry(60,60), new THREE.ShadowMaterial({opacity:.35}));
+  floor.rotation.x = -Math.PI/2; floor.receiveShadow = true; scene.add(floor);
+
+  // coins
+  var N = 84;
+  // real coin profile: raised rim, recessed face
+  var prof = [[0,-.045],[.4,-.045],[.43,-.07],[.55,-.07],[.57,-.055],[.57,.055],[.55,.07],[.43,.07],[.4,.045],[0,.045]].map(function(q){return new THREE.Vector2(q[0],q[1])});
+  var cg = new THREE.LatheGeometry(prof,56); cg.rotateX(Math.PI/2);
+  var coins = new THREE.InstancedMesh(cg, new THREE.MeshStandardMaterial({color:new THREE.Color(0xffc83d).convertSRGBToLinear(),metalness:1,roughness:.24,envMapIntensity:1.2}), N);
+  coins.castShadow = true;
+  // ----- detailed Indian coin: faces drawn on canvas, with relief from a height map -----
+  var coinMat = coins.material;
+  coinMat.color.set(0xe3ac3c).convertSRGBToLinear();
+  var CS = 512, C = CS/2, TAU = Math.PI*2;
+  function mk(){ var c = document.createElement('canvas'); c.width = c.height = CS; return c; }
+  var fc = mk(), fb = mk(), bc = mk(), bb = mk();
+  var fTex = new THREE.CanvasTexture(fc), fBump = new THREE.CanvasTexture(fb);
+  var bTex = new THREE.CanvasTexture(bc), bBump = new THREE.CanvasTexture(bb);
+  fTex.encoding = THREE.sRGBEncoding; bTex.encoding = THREE.sRGBEncoding;
+  [fTex,fBump,bTex,bBump].forEach(function(t){ t.anisotropy = 8; });
+
+  function beads(ctx,r,n,dr){ for(var i=0;i<n;i++){ var a = i/n*TAU; ctx.beginPath(); ctx.arc(C+Math.cos(a)*r, C+Math.sin(a)*r, dr, 0, TAU); ctx.fill(); } }
+  function rupee(ctx,x,y,s,col){
+    ctx.save(); ctx.translate(x,y); ctx.scale(s,s);
+    ctx.strokeStyle = col; ctx.lineWidth = .13; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+    ctx.beginPath();
+    ctx.moveTo(.05,.1); ctx.lineTo(.85,.1);
+    ctx.moveTo(.05,.32); ctx.lineTo(.85,.32);
+    ctx.moveTo(.2,.1); ctx.lineTo(.42,.1);
+    ctx.bezierCurveTo(.8,.1,.8,.6,.42,.6);
+    ctx.lineTo(.2,.6); ctx.lineTo(.78,1.05);
+    ctx.stroke(); ctx.restore();
+  }
+  function paint(canvas, h, side){
+    var ctx = canvas.getContext('2d'), rel = h ? '#ffffff' : '#ffffff', i, a;
+    ctx.shadowColor = 'rgba(0,0,0,0)'; ctx.shadowBlur = 0; ctx.shadowOffsetY = 0;
+    if(h){ ctx.fillStyle = '#262626'; }
+    else {
+      var gr = ctx.createRadialGradient(C*.75,C*.7,20,C,C,C*1.05);
+      gr.addColorStop(0,'#fbfcfe'); gr.addColorStop(.55,'#c3cad3'); gr.addColorStop(1,'#8b939e');
+      ctx.fillStyle = gr;
+    }
+    ctx.fillRect(0,0,CS,CS);
+    if(!h){ ctx.shadowColor = 'rgba(30,40,55,.6)'; ctx.shadowBlur = 4; ctx.shadowOffsetY = 3; }
+    ctx.fillStyle = rel; ctx.strokeStyle = rel; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    beads(ctx, C*.9, 64, 4.5);
+    ctx.lineWidth = 4; ctx.beginPath(); ctx.arc(C,C,C*.8,0,TAU); ctx.stroke();
+    if(side === 0){
+      // front: Ashoka Chakra (24 spokes), Hindi and English legends
+      var R = C*.36, cy = C+16;
+      ctx.lineWidth = 7; ctx.beginPath(); ctx.arc(C,cy,R,0,TAU); ctx.stroke();
+      ctx.lineWidth = 3.5; ctx.beginPath();
+      for(i=0;i<24;i++){ a = i/24*TAU; ctx.moveTo(C+Math.cos(a)*16, cy+Math.sin(a)*16); ctx.lineTo(C+Math.cos(a)*(R-6), cy+Math.sin(a)*(R-6)); }
+      ctx.stroke();
+      for(i=0;i<24;i++){ a = (i+.5)/24*TAU; ctx.beginPath(); ctx.arc(C+Math.cos(a)*(R-14), cy+Math.sin(a)*(R-14), 3.2, 0, TAU); ctx.fill(); }
+      ctx.beginPath(); ctx.arc(C,cy,13,0,TAU); ctx.fill();
+      ctx.font = '700 66px "Noto Sans Devanagari", "Nirmala UI", sans-serif';
+      ctx.fillText('भारत', C, 104);
+      ctx.font = '700 40px Unbounded, "Arial Black", sans-serif';
+      var T = 'INDIA', n = T.length;
+      for(i=0;i<n;i++){
+        var an = Math.PI/2 - (i-(n-1)/2)*.22;
+        ctx.save(); ctx.translate(C+Math.cos(an)*C*.67, C+Math.sin(an)*C*.67); ctx.rotate(an-Math.PI/2); ctx.fillText(T.charAt(i),0,0); ctx.restore();
+      }
+    } else {
+      // back: rupee sign, denomination, year
+      rupee(ctx, C-54, C-170, 120, rel);
+      ctx.font = '900 150px Unbounded, "Arial Black", sans-serif';
+      ctx.fillText('10', C, C+62);
+      ctx.font = '700 32px Unbounded, "Arial Black", sans-serif';
+      ctx.fillText('2026', C, C+182);
+    }
+  }
+  function paintAll(){
+    paint(fc,0,0); paint(fb,1,0); paint(bc,0,1); paint(bb,1,1);
+    fTex.needsUpdate = fBump.needsUpdate = bTex.needsUpdate = bBump.needsUpdate = true;
+  }
+  paintAll();
+  if(document.fonts && document.fonts.load){
+    Promise.all([
+      document.fonts.load('700 66px "Noto Sans Devanagari"','भारत'),
+      document.fonts.load('900 150px Unbounded','10'),
+      document.fonts.load('700 40px Unbounded','INDIA')
+    ]).then(paintAll, function(){});
+  }
+
+  function faceMat(t,b){ return new THREE.MeshStandardMaterial({map:t, bumpMap:b, bumpScale:2.5, metalness:1, roughness:.32, envMapIntensity:1.2}); }
+  var fGeo = new THREE.CircleGeometry(.4,64); fGeo.translate(0,0,.0465);
+  var bGeo = new THREE.CircleGeometry(.4,64); bGeo.rotateY(Math.PI); bGeo.translate(0,0,-.0465);
+  var front = new THREE.InstancedMesh(fGeo, faceMat(fTex,fBump), N);
+  var back = new THREE.InstancedMesh(bGeo, faceMat(bTex,bBump), N);
+
+  // milled (reeded) edge: alternate vertices pushed outward, flat-shaded so each groove catches light
+  var rg = new THREE.CylinderGeometry(.573,.573,.11,120,1,true);
+  var rp = rg.attributes.position;
+  for(var rowI=0; rowI<=1; rowI++){
+    for(var colI=0; colI<=120; colI++){
+      if(colI % 2){ var vi = rowI*121 + colI; rp.setX(vi, rp.getX(vi)*1.021); rp.setZ(vi, rp.getZ(vi)*1.021); }
+    }
+  }
+  rg = rg.toNonIndexed(); rg.computeVertexNormals(); rg.rotateX(Math.PI/2);
+  var reed = new THREE.InstancedMesh(rg, coinMat, N);
+
+  var coinGroup = new THREE.Group(); coinGroup.add(coins, reed, front, back); scene.add(coinGroup);
+  var seed = [];
+  for(var i=0;i<N;i++) seed.push({a:i/N*Math.PI*6, y:(i/N-.5)*9, s:.7+Math.random()*.6, ph:Math.random()*6.28});
+  var dummy = new THREE.Object3D();
+  var TAU2 = Math.PI*2, ray = new THREE.Raycaster(), mv = new THREE.Vector2(), moved = false, hoverId = -1;
+  var hs = new Float32Array(N).fill(1), fl = new Float32Array(N), ft = new Float32Array(N);
+  var rx = new Float32Array(N), ry = new Float32Array(N), rz = new Float32Array(N);
+  var vx = new Float32Array(N), vy = new Float32Array(N), vz = new Float32Array(N);
+  var ex = new Float32Array(N), ey = new Float32Array(N), ez = new Float32Array(N);
+  var sx = new Float32Array(N), sy = new Float32Array(N), sz = new Float32Array(N);
+  var rainStart = false, rainT = -1, rainAge = -1, lastNow = 0, tilt = 1;
+  function wr(a){ return a - TAU2*Math.round(a/TAU2); }
+  startRain = function(){ if(!reduce) rainStart = true; };
+
+  // bars — mode-colored pillars (SIP pink, FD gold, Loan blue)
+  var barGroup = new THREE.Group(); scene.add(barGroup);
+  var bars = [], cur = new Array(B).fill(.01), vel = new Array(B).fill(0);
+  var barColors = {
+    sip: [0xff6fb5, 0xff4d9a, 0xff3d8a, 0xff2d7a, 0xff6fb5, 0xff4d9a, 0xff3d8a, 0xff2d7a],
+    fd:  [0xffd24a, 0xffc83d, 0xffb800, 0xffaa00, 0xffd24a, 0xffc83d, 0xffb800, 0xffaa00],
+    loan:[0x5b8def, 0x4a7de0, 0x3a6dd0, 0x2a5dc0, 0x5b8def, 0x4a7de0, 0x3a6dd0, 0x2a5dc0]
+  };
+  function barColor(mode, j){
+    var list = barColors[mode] || barColors.sip;
+    return new THREE.Color(list[j % list.length]).convertSRGBToLinear();
+  }
+  for(var j=0;j<B;j++){
+    var g = new THREE.BoxGeometry(.65,1,.65); g.translate(0,.5,0);
+    var mat = new THREE.MeshPhysicalMaterial({
+      color: barColor('sip', j),
+      metalness: .25,
+      roughness: .28,
+      clearcoat: 1,
+      clearcoatRoughness: .12,
+      emissive: barColor('sip', j),
+      emissiveIntensity: 0.12
+    });
+    var m = new THREE.Mesh(g, mat);
+    m.castShadow = true;
+    m.position.x = (j-(B-1)/2) * 1.05;
+    barGroup.add(m);
+    bars.push(m);
+  }
+  function recolorBars(md){
+    bars.forEach(function(b, i){
+      var c = barColor(md, i);
+      b.material.color.copy(c);
+      b.material.emissive.copy(c);
+    });
+  }
+
+  var wide = true;
+  function resize(){
+    var w = window.innerWidth, h = window.innerHeight;
+    renderer.setSize(w,h,false);
+    camera.aspect = w/h; camera.updateProjectionMatrix();
+    wide = w/h > 1.1;
+  }
+  window.addEventListener('resize',resize); resize();
+
+  var mx = 0, my = 0;
+  window.addEventListener('pointermove',function(e){
+    moved = true; mx = e.clientX/window.innerWidth*2-1; my = -(e.clientY/window.innerHeight*2-1);
+  });
+
+  window.addEventListener('click',function(e){
+    if(hoverId >= 0 && rainAge < 0 && !e.target.closest('a,button,input,label,.panel')) ft[hoverId] += Math.PI;
+  });
+  function clamp(v){return Math.max(0,Math.min(1,v))}
+  function smooth(a,b,v){var t=clamp((v-a)/(b-a));return t*t*(3-2*t)}
+
+  var c1 = new THREE.Color(0x1f2bff), c2 = new THREE.Color(0xb000ff), cc = new THREE.Color();
+  var t0 = performance.now(), ps = 0;
+
+  function frame(now){
+    var t = (now - t0)/1000, dt = Math.min(.04, (now - lastNow)/1000 || .016); lastNow = now;
+    if(rainStart){ rainT = now; }
+    rainAge = rainT < 0 ? -1 : (now - rainT)/1000;
+    if(rainAge > 7.5){ rainT = -1; rainAge = -1; }
+    mv.set(mx,my); ray.setFromCamera(mv, camera);
+    hoverId = -1;
+    if(moved && rainAge < 0){ var hh = ray.intersectObjects([front, back]); if(hh.length) hoverId = hh[0].instanceId; }
+    document.body.style.cursor = hoverId >= 0 ? 'pointer' : '';
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    var pr = max > 0 ? window.scrollY/max : 0;
+    ps += (pr - ps)*.07;
+    var p = ps, pv = pr - ps;
+    wild += (wildT - wild)*.06;
+    var sp = (reduce ? .2 : 1)*(1 + wild*3);
+
+    var bell = Math.sin(Math.PI*clamp(p/.55));
+    var R = 3 + 3.5*bell;
+    var gs = 1 - .8*smooth(.5,.66,p) + .8*smooth(.9,1,p);
+
+    for(var i=0;i<N;i++){
+      var s = seed[i];
+      var a = s.a + t*.35*sp;
+      var rr = R*(1 + wild*.25*Math.sin(t*3+s.ph));
+      dummy.position.set(Math.cos(a)*rr, s.y*(1+bell*.3) + Math.sin(t+s.ph)*.3 + wild*Math.sin(t*4+s.ph)*.7, Math.sin(a)*rr);
+      hs[i] += ((i === hoverId ? 1.3 : 1) - hs[i])*.15; fl[i] += (ft[i] - fl[i])*.1;
+      dummy.rotation.set(t*s.s*sp*.8 + s.ph + pv*30*s.s, a*.5 + Math.sin(t*.7+s.ph)*.3 + fl[i], t*.6*s.s*sp);
+      if(rainStart){
+        rx[i] = dummy.position.x; ry[i] = dummy.position.y; rz[i] = dummy.position.z;
+        ex[i] = dummy.rotation.x; ey[i] = dummy.rotation.y; ez[i] = dummy.rotation.z;
+        vx[i] = (Math.random()-.5)*5; vy[i] = 3 + Math.random()*5; vz[i] = (Math.random()-.5)*4;
+        sx[i] = (Math.random()-.5)*6; sy[i] = (Math.random()-.5)*6; sz[i] = (Math.random()-.5)*6;
+      }
+      if(rainAge >= 0){
+        var hp = dummy.position, hr = dummy.rotation, fy = barGroup.position.y + .12 + (i%6)*.05;
+        if(rainAge < 6){
+          vy[i] -= 20*dt; rx[i] += vx[i]*dt; ry[i] += vy[i]*dt; rz[i] += vz[i]*dt;
+          if(ry[i] < fy){ ry[i] = fy; vy[i] *= -.35; vx[i] *= .7; vz[i] *= .7; if(Math.abs(vy[i]) < 1) vy[i] = 0; }
+          if(ry[i] <= fy + .001 && vy[i] === 0){
+            ex[i] += (-Math.PI/2 + TAU2*Math.round((ex[i]+Math.PI/2)/TAU2) - ex[i])*.2;
+            ey[i] += (TAU2*Math.round(ey[i]/TAU2) - ey[i])*.2;
+            ez[i] += (TAU2*Math.round(ez[i]/TAU2) - ez[i])*.2;
+          } else { ex[i] += sx[i]*dt; ey[i] += sy[i]*dt; ez[i] += sz[i]*dt; }
+        }
+        var bb2 = clamp((rainAge-6)/1.5); bb2 = bb2*bb2*(3-2*bb2);
+        dummy.position.set(rx[i] + (hp.x - rx[i])*bb2, ry[i] + (hp.y - ry[i])*bb2, rz[i] + (hp.z - rz[i])*bb2);
+        dummy.rotation.set(ex[i] + wr(hr.x - ex[i])*bb2, ey[i] + wr(hr.y - ey[i])*bb2, ez[i] + wr(hr.z - ez[i])*bb2);
+      }
+      dummy.scale.setScalar(s.s*1.05*gs*hs[i]);
+      dummy.updateMatrix();
+      coins.setMatrixAt(i, dummy.matrix); reed.setMatrixAt(i, dummy.matrix); front.setMatrixAt(i, dummy.matrix); back.setMatrixAt(i, dummy.matrix);
+    }
+    coins.instanceMatrix.needsUpdate = true; reed.instanceMatrix.needsUpdate = true; front.instanceMatrix.needsUpdate = true; back.instanceMatrix.needsUpdate = true; rainStart = false;
+    coinGroup.position.x += ((wide ? 2.6 : 0) - coinGroup.position.x)*.05;
+    tilt += ((rainAge >= 0 && rainAge < 6.5 ? 0 : 1) - tilt)*.08;
+    coinGroup.rotation.z = (.25 + wild*Math.sin(t*1.5)*.3)*tilt;
+
+    var vis = smooth(.42,.58,p)*(1 - smooth(.74,.84,p));
+    barGroup.position.x += ((wide ? 3 : 0) - barGroup.position.x)*.05;
+    barGroup.position.y = wide ? -2.4 : -3.2;
+    barGroup.scale.setScalar(wide ? 1 : .6);
+    barGroup.rotation.y = -.5 + Math.sin(t*.4)*.15 + wild*Math.sin(t*2)*.35;
+    for(var k=0;k<B;k++){
+      // Smoother spring toward target
+      vel[k] += (targets[k]-cur[k])*.045;
+      vel[k] *= .88;
+      cur[k] += vel[k];
+      // Staggered reveal as user scrolls into calc section
+      var gt = clamp(vis*1.5 - k*.08);
+      var u = gt - 1;
+      var grow = gt >= 1 ? 1 : 1 + 2.70158*u*u*u + 1.70158*u*u;
+      var h = Math.max(.001, cur[k]*grow);
+      bars[k].scale.y = h;
+      bars[k].visible = grow > .002;
+      // Soft emissive pulse on taller bars
+      bars[k].material.emissiveIntensity = 0.08 + Math.min(h / 6, 0.2);
+    }
+
+    camera.position.x += (mx*1.2 - camera.position.x)*.05;
+    camera.position.y += (my*.8 - camera.position.y)*.05;
+    camera.position.z = 10 - 2.5*bell;
+    camera.lookAt(0,0,0);
+
+    cc.copy(c1).lerp(c2, wild);
+    document.documentElement.style.setProperty('--bg', '#'+cc.getHexString());
+    scene.fog.color.copy(cc).convertSRGBToLinear();
+    floor.position.y = barGroup.position.y - .01;
+
+    renderer.render(scene,camera);
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+
+  // Scroll-reveal + number counters
+  function animateCount(el){
+    var target = parseFloat(el.getAttribute('data-count'));
+    if(isNaN(target)) return;
+    var suffix = el.getAttribute('data-suffix') || '';
+    var start = 0, dur = 1100, t0 = null;
+    el.classList.add('animating');
+    function step(now){
+      if(!t0) t0 = now;
+      var p = Math.min((now - t0) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      var val = start + (target - start) * eased;
+      el.textContent = '₹' + (target % 1 === 0 ? Math.round(val) : val.toFixed(2)) + suffix;
+      if(p < 1) requestAnimationFrame(step);
+      else el.classList.remove('animating');
+    }
+    requestAnimationFrame(step);
+  }
+
+  if(!reduce && 'IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          e.target.classList.add('visible');
+          // Count up portfolio numbers
+          e.target.querySelectorAll('.val[data-count]').forEach(function(v){
+            if(!v.dataset.done){ v.dataset.done = '1'; animateCount(v); }
+          });
+          if(e.target.classList.contains('val') && e.target.hasAttribute('data-count') && !e.target.dataset.done){
+            e.target.dataset.done = '1'; animateCount(e.target);
+          }
+          io.unobserve(e.target);
+        }
+      });
+    },{threshold:0.12, rootMargin:'0px 0px -30px 0px'});
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .steps, .chips').forEach(function(el){
+      io.observe(el);
+    });
+  } else {
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .steps, .chips').forEach(function(el){
+      el.classList.add('visible');
+    });
+    document.querySelectorAll('.val[data-count]').forEach(function(v){ animateCount(v); });
+  }
+})();
+</script>
+</body>
+</html>
